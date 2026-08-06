@@ -159,3 +159,46 @@ transform:translateY(0);
 }
 
 }
+/* Expedientes CN40 */
+
+.expediente{
+
+position:relative;
+z-index:2;
+
+width:90%;
+max-width:700px;
+
+margin:30px auto 0;
+
+padding:30px;
+
+background:rgba(0,0,0,.45);
+
+border:1px solid rgba(53,214,255,.25);
+
+border-radius:15px;
+
+text-align:center;
+
+color:#c6d3df;
+
+}
+
+
+.expediente h2{
+
+color:#35d6ff;
+
+letter-spacing:3px;
+
+margin-bottom:20px;
+
+}
+
+
+.expediente p{
+
+line-height:1.6;
+
+}
