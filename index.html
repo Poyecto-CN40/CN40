@@ -3,52 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CN40</title>
+
+<title>CN40 | Centro de Operaciones</title>
 
 <style>
-body{
+
+*{
 margin:0;
-background:#050505;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#05070d;
 font-family:Arial,Helvetica,sans-serif;
+color:white;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-color:white;
+overflow:hidden;
 }
 
-.contenedor{
+.fondo{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#10345d 0%,transparent 45%),
+radial-gradient(circle at bottom,#00131f 0%,transparent 45%),
+#05070d;
+}
+
+.panel{
+position:relative;
+z-index:10;
 text-align:center;
+width:90%;
 max-width:700px;
 padding:40px;
+border:1px solid rgba(0,255,255,.25);
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+border-radius:20px;
+box-shadow:0 0 40px rgba(0,255,255,.15);
+}
+
+.logo{
+font-size:60px;
+margin-bottom:20px;
 }
 
 h1{
 font-size:48px;
 letter-spacing:8px;
-color:#3ea6ff;
+color:#35d6ff;
 margin-bottom:10px;
 }
 
 h2{
 font-weight:300;
-color:#ddd;
-margin-bottom:40px;
+color:#b9c7d8;
+margin-bottom:35px;
 }
 
-p{
-font-size:20px;
-line-height:1.8;
-color:#bbb;
+.estado{
+display:inline-block;
+padding:12px 22px;
+border-radius:40px;
+background:#102b40;
+color:#77ffb8;
+margin-bottom:35px;
 }
 
 button{
-margin-top:40px;
-padding:18px 45px;
+padding:16px 35px;
 font-size:18px;
 border:none;
-border-radius:40px;
-background:#3ea6ff;
+border-radius:10px;
+background:#2ec8ff;
 color:white;
 cursor:pointer;
 transition:.3s;
@@ -58,29 +91,76 @@ button:hover{
 transform:scale(1.05);
 }
 
+#mensaje{
+margin-top:35px;
+font-size:22px;
+display:none;
+animation:aparece 1s;
+}
+
+@keyframes aparece{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="fondo"></div>
+
+<div class="panel">
+
+<div class="logo">🛰️</div>
 
 <h1>CN40</h1>
 
-<h2>COMITÉ NIVEL 40</h2>
+<h2>Centro de Operaciones</h2>
 
-<p>
-Si has llegado hasta aquí...
+<div class="estado">
+● Sistema operativo
+</div>
+
 <br><br>
-La operación acaba de comenzar.
-</p>
 
-<button onclick="alert('Bienvenido al Comité Nivel 40')">
-INICIAR OPERACIÓN
+<button onclick="activar()">
+Iniciar operación
 </button>
 
+<div id="mensaje">
+
+<h3>✔ Acceso concedido</h3>
+
+<p style="margin-top:15px;">
+Bienvenido al Centro de Operaciones CN40.
+<br><br>
+La verdad se descubre. No se entrega.
+</p>
+
 </div>
+
+</div>
+
+<script>
+
+function activar(){
+
+document.getElementById("mensaje").style.display="block";
+
+}
+
+</script>
 
 </body>
 </html>
