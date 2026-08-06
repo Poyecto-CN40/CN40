@@ -61,9 +61,23 @@ body{
 /* Títulos */
 
 h1{
-    font-size:48px;
-    letter-spacing:8px;
+    h1{
+    font-size:52px;
+    letter-spacing:10px;
     color:#35d6ff;
+    text-transform:uppercase;
+    text-shadow:0 0 20px rgba(53,214,255,.35);
+}
+
+.nivel{
+    margin-top:-8px;
+    margin-bottom:15px;
+    color:white;
+    letter-spacing:12px;
+    text-shadow:none;
+}
+   
+   
 }
 
 h2{
