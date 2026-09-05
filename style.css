@@ -206,12 +206,17 @@ line-height:1.6;
    ADAPTACIÓN MÓVIL CN40
 ========================= */
 
+/* =========================
+   ADAPTACIÓN MÓVIL CN40
+========================= */
+
 @media (max-width: 600px) {
 
     body {
         min-height: 100dvh;
         padding: 20px 14px;
         overflow-x: hidden;
+        flex-direction: column;
     }
 
     .panel {
@@ -236,6 +241,7 @@ line-height:1.6;
     .expediente {
         width: 100%;
         padding: 20px 16px;
+        margin-top: 20px;
     }
 
     .expediente h2 {
