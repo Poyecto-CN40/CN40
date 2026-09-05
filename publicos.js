@@ -1,4 +1,6 @@
 const pruebasPublicas = [
-    // Aquí iremos añadiendo únicamente las pruebas
-    // que quieras mostrar públicamente.
+    {
+        titulo: "Prueba de sistema",
+        url: "menu.html"
+    }
 ];
